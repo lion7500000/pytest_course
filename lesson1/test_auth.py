@@ -32,25 +32,13 @@ ERROR_TXT = 'Epic sadface: Username and password do not match any user in this s
 #     time.sleep(5)
 #     assert driver.current_url == "https://www.saucedemo.com/inventory.html"
 
-    # driver.quit()
-
-@pytest.fixture
-def log_in(driver):
-    driver.get(BASE_URL)
-    user_fild = driver.find_element(*USER_FILD)
-    pass_fild = driver.find_element(*PASSWORD_FILD)
-    user_fild.send_keys("standard_user")
-    pass_fild.send_keys("secret_sauce")
-    driver.find_element(*LOGIN_BTN).click()
-    yield driver.current_url
-
-
 
 def test_login_form(driver,log_in):
-    assert log_in == MAIN_PAGE, f'expected result {MAIN_PAGE}, but got {log_in} '
+    cur_url = driver.current_url
+    assert cur_url == MAIN_PAGE, f'expected result {MAIN_PAGE}, but got {log_in} '
 
 
-def test_wrong_Login(driver):
+def test_wron_Login(driver):
     user_fild2 = driver.find_element(*USER_FILD)
     pass_fild2 = driver.find_element(*PASSWORD_FILD)
     user_fild2.send_keys("user")
