@@ -8,12 +8,9 @@ from selenium.webdriver.edge.options import Options as EdgeService
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from selenium.webdriver.common.by import By
+import data
 
-BASE_URL = "https://www.saucedemo.com/"
-USER_FILD = (By.ID, "user-name")
-PASSWORD_FILD = (By.ID, "password")
-LOGIN_BTN = (By.ID, "login-button")
+
 
 supported_browsers = {
     'chrome': webdriver.Chrome,
@@ -67,12 +64,12 @@ def driver(request):
 
 @pytest.fixture(scope="function")
 def log_in(driver):
-    driver.get(BASE_URL)
-    user_fild = driver.find_element(*USER_FILD)
-    pass_fild = driver.find_element(*PASSWORD_FILD)
-    user_fild.send_keys("standard_user")
-    pass_fild.send_keys("secret_sauce")
-    driver.find_element(*LOGIN_BTN).click()
+    driver.get(data.BASE_URL)
+    user_fild = driver.find_element(*data.USER_FILD)
+    pass_fild = driver.find_element(*data.PASSWORD_FILD)
+    user_fild.send_keys(data.LOGIN)
+    pass_fild.send_keys(data.PASSWORD)
+    driver.find_element(*data.LOGIN_BTN).click()
     yield driver.current_url
 
 # @pytest.fixture(scope='session')
