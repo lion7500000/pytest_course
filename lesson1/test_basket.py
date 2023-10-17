@@ -23,7 +23,7 @@ def test_add_dell_product_to_basket(driver, log_in):
     assert item_in_basket == "Sauce Labs Backpack"
     driver.find_element(*REMOVE_BTN).click()
     # empty basket should have class "removed_cart_item"
-    WebDriverWait(driver,10).until(EC.invisibility_of_element(CART_BADGE))
+    WebDriverWait(driver, 10).until_not(EC.presence_of_element_located(CART_BADGE))
 
 def test_add_dell_product_from_product_card_to_basket(driver, log_in):
     driver.find_element(*BACKPACK_ITEM).click()
@@ -34,5 +34,6 @@ def test_add_dell_product_from_product_card_to_basket(driver, log_in):
     driver.find_element(*ITEM_IN_BASKET).click()
     driver.find_element(*REMOVE_BTN).click()
     # after remove items class "shopping_cart_badge" is invisible
-    WebDriverWait(driver, 10).until(EC.invisibility_of_element(CART_BADGE))
+    WebDriverWait(driver, 10).until_not(EC.presence_of_element_located(CART_BADGE))
+
 
