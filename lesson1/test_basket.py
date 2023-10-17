@@ -38,3 +38,4 @@ def test_add_dell_product_from_product_card_to_basket(driver, log_in):
     WebDriverWait(driver, 10).until_not(EC.presence_of_element_located(locators.CART_BADGE))
 
 
+

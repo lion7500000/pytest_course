@@ -35,3 +35,15 @@ FILTER_AZ = (By.CSS_SELECTOR, ".product_sort_container option[value='az']")
 FILTER_ZA = (By.CSS_SELECTOR, ".product_sort_container option[value='za']")
 FILTER_LOW_HIGH = (By.CSS_SELECTOR, ".product_sort_container option[value='lohi']")
 FILTER_HIGH_LOW = (By.CSS_SELECTOR, ".product_sort_container option[value='hilo']")
+
+# irder the product
+CHECKOUT_BTN = (By.CSS_SELECTOR,"button#checkout")
+FIRST_NAME_FILD = (By.ID, "first-name")
+LAST_NAME_FILD = (By.ID, "last-name")
+ZIP_COD_FILD = (By.ID, "postal-code")
+CONTINUE_BTN = (By.ID, "continue")
+CHECKOUT_TEXT = (By.CSS_SELECTOR, ".title")
+CHECKOUT_OVERVIEW = (By.CSS_SELECTOR, "span.title")
+FINISH_BTN = (By.CSS_SELECTOR, "button#finish")
+CHECKOUT_COMPLETE_TEXT = (By.CSS_SELECTOR, "span.title")
+
