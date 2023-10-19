@@ -1,4 +1,5 @@
-import locators
+from lesson1 import locators
+
 
 def test_itema_AZ(driver, log_in):
     #set filter fom a to z

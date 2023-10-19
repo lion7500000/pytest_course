@@ -1,8 +1,6 @@
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-import locators
-
+from lesson1 import locators
 
 
 # MAIN_PAGE = "https://www.saucedemo.com/inventory.html"
@@ -35,7 +33,8 @@ def test_add_dell_product_from_product_card_to_basket(driver, log_in):
     driver.find_element(*locators.ITEM_IN_BASKET).click()
     driver.find_element(*locators.REMOVE_BTN).click()
     # after remove items class "shopping_cart_badge" is invisible
-    WebDriverWait(driver, 10).until_not(EC.presence_of_element_located(locators.CART_BADGE))
+    test = WebDriverWait(driver, 10).until_not(EC.presence_of_element_located(locators.CART_BADGE))
+    assert test is True
 
 
 

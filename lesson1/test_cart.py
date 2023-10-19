@@ -1,4 +1,5 @@
-import locators
+from lesson1 import locators
+
 
 def test_productcart_with_image(driver, log_in):
     driver.find_element(*locators.IMAGE_PRODUCT).click()

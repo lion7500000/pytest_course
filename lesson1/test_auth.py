@@ -1,4 +1,4 @@
-import locators
+from lesson1 import locators
 import data
 
 def test_login_form(driver,log_in):

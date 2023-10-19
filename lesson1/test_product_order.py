@@ -1,4 +1,4 @@
-import locators
+from lesson1 import locators
 import data
 def test_order_product(log_in, driver):
     driver.find_element(*locators.ADD_TO_BASKET_BTN).click()

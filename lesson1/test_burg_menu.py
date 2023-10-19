@@ -1,7 +1,7 @@
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-import locators
+from lesson1 import locators
+
 
 def test_menu_log_out(driver, log_in):
     #click to hamburger menu
