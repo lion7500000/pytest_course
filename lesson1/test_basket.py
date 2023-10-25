@@ -2,19 +2,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from lesson1 import locators
 
-
-# MAIN_PAGE = "https://www.saucedemo.com/inventory.html"
-# BASKET_BTN = (By.ID, "shopping_cart_container")
-# ADD_TO_BASKET_BTN = (By.ID, "add-to-cart-sauce-labs-backpack")
-# ITEM_IN_BASKET = (By.ID, "item_4_title_link")
-# REMOVE_BTN = (By.ID, "remove-sauce-labs-backpack")
-# EMPTY_BASKET = (By.CLASS_NAME, "cart_desc_label")
-# BACKPACK_ITEM = (By.ID, "item_4_title_link")
-# ADD_TO_CARD_IN_PRODUCT_CARD = (By.ID,"add-to-cart-sauce-labs-backpack")
-# # CLASS_REMOVE = (By.CLASS_NAME, "removed_cart_item")
-# CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
-
-
 def test_add_dell_product_to_basket(driver, log_in):
     driver.find_element(*locators.ADD_TO_BASKET_BTN).click()
     driver.find_element(*locators.BASKET_BTN).click()
@@ -22,7 +9,8 @@ def test_add_dell_product_to_basket(driver, log_in):
     assert item_in_basket == "Sauce Labs Backpack"
     driver.find_element(*locators.REMOVE_BTN).click()
     # empty basket should have class "removed_cart_item"
-    WebDriverWait(driver, 10).until_not(EC.presence_of_element_located(locators.CART_BADGE))
+    test = WebDriverWait(driver, 10).until_not(EC.presence_of_element_located(locators.CART_BADGE))
+    assert test is True
 
 def test_add_dell_product_from_product_card_to_basket(driver, log_in):
     driver.find_element(*locators.BACKPACK_ITEM).click()
