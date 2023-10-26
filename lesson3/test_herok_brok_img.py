@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
+from pytest_check import check
 import requests
 
 def test_brok_img(driver):
@@ -22,12 +22,17 @@ def test_brok_img(driver):
         else:
             work_images.append(image_attr)
 
+    # Use pytest-check's equal to check for no broken images
+    assert len(img_set) == 4
+    assert broken_images not in work_images, f'Broken image URLs: {", ".join(broken_images)} \n and working images {", ".join(work_images)}'
+    # Use pytest-check's check then broken_images not in work_images
+    check.is_not_in(broken_images, work_images, 'Check the broken_images has error')
 
     # Print the broken image URLs
-    if broken_images != work_images:
-        print(f'Broken image URLs: {", ".join(broken_images)} \n and working images {", ".join(work_images)}')
-    else:
-        print('No broken images found.')
+    # if broken_images:
+    #     print(f'Broken image URLs: {", ".join(broken_images)} \n and working images {", ".join(work_images)}')
+    # else:
+    #     print('No broken images found.')
 
 
 
