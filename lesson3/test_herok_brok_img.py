@@ -34,6 +34,37 @@ def test_brok_img(driver):
     # else:
     #     print('No broken images found.')
 
-
+    ### reminder ###
+        # check.equal - a == b
+        # check.not_equal - a != b
+        # check.is_ - a is b
+        # check.is_not - a is not b
+        # check.is_true - bool(x) is True
+        # check.is_false - bool(x) is False
+        # check.is_none - x is None
+        # check.is_not_none - x is not None
+        # check.is_in - a in b
+        # check.is_not_in - a not in b
+        # check.is_instance - isinstance(a, b)
+        # check.is_not_instance -
+        # not isinstance(a, b)
+        # check.almost_equal - a == pytest.approx(b, rel, abs)
+        # see
+        # at: pytest.approx
+        # check.not_almost_equal - a != pytest.approx(b, rel, abs)
+        # see
+        # at: pytest.approx
+        # check.greater - a > b
+        # check.greater_equal - a >= b
+        # check.less - a < b
+        # check.less_equal - a <= b
+        # check.between - a < b < c
+        # check.raises - func
+        # raises
+        # given
+        # exception
+        # similar
+        # to
+        # pytest.raises ###
 
     

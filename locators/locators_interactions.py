@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 class Locators:
@@ -48,3 +49,13 @@ class Locators:
     CHECKOUT_OVERVIEW = (By.CSS_SELECTOR, "span.title")
     FINISH_BTN = (By.CSS_SELECTOR, "button#finish")
     CHECKOUT_COMPLETE_TEXT = (By.CSS_SELECTOR, "span.title")
+
+    # drag and drop site
+    DRAG = (By.CSS_SELECTOR, "#simpleDropContainer div[id='draggable']")
+    DROP = (By.CSS_SELECTOR, "#simpleDropContainer div[id='droppable']")
+    TEXT_DROPPED = (By.CSS_SELECTOR, "#simpleDropContainer div[id='droppable'] p")
+    ACCEPT_MENU = (By.CSS_SELECTOR, '#droppableExample-tab-accept')
+    ACCEPT_DRAG = (By.ID, 'acceptable')
+    NOT_ACCEPT_DRAG = (By.ID, 'notAcceptable')
+    ACCEPT_DROP = (By.CSS_SELECTOR, '#droppable')
+    ACCEPT_DROP_TEXT = (By.CSS_SELECTOR, '#acceptDropContainer #droppable p')
