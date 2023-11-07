@@ -16,7 +16,7 @@ def test_brok_img(driver):
         image_attr = image.get_attribute('src')
         # print(image_attr)
         response = requests.head(image_attr)
-        # print(resource)
+        # print(response)
         if response.status_code != 200:
             broken_images.append(image_attr)
         else:

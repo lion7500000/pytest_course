@@ -14,3 +14,4 @@ class Data:
     CHECK_OUT_TXT = "Checkout: Your Information"
     CHECK_OUT_TXT2 = "Checkout: Overview"
     CHECK_OUT_COMP_TXT = "Checkout: Complete!"
+    ALERT_PAGE = 'https://demoqa.com/alerts'

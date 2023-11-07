@@ -12,3 +12,8 @@ ZIP_COD = "9045"
 CHECK_OUT_TXT = "Checkout: Your Information"
 CHECK_OUT_TXT2 = "Checkout: Overview"
 CHECK_OUT_COMP_TXT = "Checkout: Complete!"
+# URLS
+REGISTRATION_PAGE = 'https://victoretc.github.io/selenium_waits/'
+# CREDENTIALS
+PASSWORD_TEST = 'password'
+REGISTRATION_PAGE2 = 'https://victoretc.github.io/selenium_waits/'

@@ -59,3 +59,19 @@ class Locators:
     NOT_ACCEPT_DRAG = (By.ID, 'notAcceptable')
     ACCEPT_DROP = (By.CSS_SELECTOR, '#droppable')
     ACCEPT_DROP_TEXT = (By.CSS_SELECTOR, '#acceptDropContainer #droppable p')
+
+    #registration page from Vic
+    HEADER_TEXT = (By.XPATH, '//h1')
+    START_BUTTON = (By.ID, 'startTest')
+    LOG_FILD = (By.CSS_SELECTOR, '#registrationForm #login')
+    PASS_FILD = (By.CSS_SELECTOR, '#registrationForm #password')
+    AGREE_CHECK_BOX = (By.XPATH, "//input[@id='agree']")
+    REG_BTN = (By.XPATH, "//button[text()='Зарегистрироваться']")
+    SUCCESS_TEXT = (By.ID, 'successMessage')
+
+    # alert
+    CLICK_ALERT_BTB = (By.XPATH, '//button[@id="alertButton"]')
+    ALERT_BUTTON_5SEC = (By.XPATH, '//button[@id="timerAlertButton"]')
+    CONFIRM_BTN = (By.XPATH, '//button[@id="confirmButton"]')
+    PROMT_BTN = (By.XPATH, '//button[@id="promtButton"]')
+    PROMT_ENTERED_TXT = (By.XPATH, '//span[@id="promptResult"]')
